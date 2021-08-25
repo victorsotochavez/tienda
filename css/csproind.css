@@ -1,0 +1,434 @@
+/*----------------HEADER--------------------*/
+.cuerpo {
+    margin:0;
+    background-color: white;
+}
+
+/*En este caso tambien se puede utilizar el selector
+p = .rw   */
+
+html {
+  box-sizing: border-box;
+}
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+/*
+header,.enc,.ra,.rb,.rc,.rd,.re{
+	box-sizing: border-box;
+}
+*/
+
+header{
+	display: block;
+  margin:0;
+  position: sticky;
+  top:0;
+  width: 100%;
+  background-color: black;
+  z-index: 2;/*Mientras mayor sea el numero se posicionara
+  mas encima de otro elemento relative o abosulte o sticky
+  o fixed si no lo mencionas el valor predeterminado
+  sera 0*/
+}
+
+.enc {
+	display: block;
+	margin:0;
+	height:65px;
+	width: 100%;
+	background-color:black;
+	border-bottom: white 1px solid;
+	
+}
+
+.boi{
+	background-color: black;
+	color:white;
+	border: 1px solid red;
+	border-radius: 5px;
+}
+
+
+
+.boi:hover{
+background-color:rgb(0,0,0);
+opacity:0.7;
+border:1px solid red;
+}
+
+.boi:active{
+border: 1px solid white;
+}
+
+.rd{
+	margin-left: 15px;/*sirve para el espacio*/
+	/*siempre es este orden, sino no funcionara*/
+	padding-top: 5px;
+	padding-right: 15px;
+	padding-bottom: 5px;
+	padding-left: 15px;
+	text-decoration: none;
+	color:white;
+	    font-family:Sofia;
+	        background-color: black;
+	border: white 1px solid;
+	border-radius: 7px;
+	text-align: center;
+}
+
+.rd:hover{
+	color:black;
+	background-color:white; 
+	border: black 1px solid;
+border-radius: 7px;
+}
+
+.re{
+	margin-left:5px;
+	padding-top: 10px;
+	padding-right: 10px;
+	padding-bottom: 10px;
+	padding-left: 10px;
+	color:white;
+text-decoration: none;
+    font-family:Sofia;
+    background-color: black;
+border: white 1px solid;
+border-radius: 7px;
+}
+
+.re:hover{
+	color:black;
+	background-color:white; 
+	border: black 1px solid;
+border-radius: 7px;
+}
+
+.ra{
+	display: inline-block;
+	margin-left: 302px;/*sirve para el espacio*/
+	padding: 5px;
+	text-decoration: none;
+	/*border: white 1px solid;*/
+	color:#15f4ee;
+    font-family:Sofia;
+    font-size:30px;
+}
+
+.rb {
+	margin-left: 145px;
+display: inline-block;
+}
+
+#rba{
+	background-color: black;
+	color:white;
+	border:white 1px solid;
+	
+	border-radius: 7px;
+
+	padding:6px;
+}
+
+.rc{
+	color:white;
+	border-style: none;
+	background-color: black;
+}
+
+.rc:hover{
+	color:#15f4ee;
+}
+
+#rf{
+	border:1px solid black;
+		margin-left:10px;
+}
+
+/*
+  top: 120px;
+  left: 500px;
+  font-size: 30px;
+  color:white;
+  */
+
+/*----------------NAVEGADOR--------------------*/
+ .navg{
+ 	display:block;
+ 	width:100%;
+ }
+
+.navli  {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;/*desbordamiento=overflow*/
+background-color: rgba(18, 138, 125, .9);
+}
+
+.navg .navc{
+  float: left;
+}
+
+.navg .navc .navlk {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 5px 107px;
+  text-decoration: none;
+  font-family:Sofia;
+  border-bottom: 1px solid black;
+}
+
+.navg .navc .navlk:hover {
+  background-color:white;
+  color:black; 
+}
+
+/*
+#dor:hover{
+	background-color: blue;
+}
+
+#mubl:hover{
+	background-color: brown;
+}
+
+#sla:hover{
+	background-color: orange;
+}
+
+#comed:hover{
+	background-color: purple;
+}
+
+#ofca:hover{
+	background-color: pink;
+}
+
+#extr:hover{
+	background-color: green;
+}
+*/
+
+/*----------------SUBNAVEGADOR--------------------*/
+.navsub{
+display:none;
+  position: absolute;
+	width:100%;
+background-color: rgba(18, 138, 125, .9);
+  z-index: 1;
+}
+
+#nsdor{
+	padding-left: 380px;
+}
+
+#nssa{
+	padding-left: 398px;
+}
+
+#nsco{
+	padding-left: 490px;
+}
+
+#nsof{
+	padding-left: 451px;
+}
+
+.navsub .nsli{
+	list-style-type: none;
+  float:left;
+}
+
+
+.navsub .nsc .nslk{
+	display: block;
+  color: black;
+  text-decoration: none;
+}
+
+.navsub .nsc .nslk:hover{
+	color:darkred;
+}
+
+.navsub .nsp{
+	color:#8B4513;
+}
+
+/*---------------------------MAIN---------------------------*/
+
+#conte{
+	width:100%;
+	padding-top:15px;
+	padding-right:20px;
+	padding-left:20px;
+	padding-bottom:50px;
+
+	background-color:black;
+}
+
+.prin{
+	display:flex;
+	padding:5px;
+	background-color: black;
+	border:1px solid white;
+	border-radius:7px;
+}
+
+/*-----------------------IMAGEN-----------------------*/
+.prima{
+	width:750px;
+	height:510px;
+}
+
+/*-----------------------LINEA-----------------------*/
+.lia{
+	margin-left:5px; 
+	height:510px;
+	width:1px;
+	background-color:white;
+}
+
+/*-----------------------TEXTO-----------------------*/
+.prde{
+	margin-left: 60px;
+	font-family:Sofia;
+	color:white;
+}
+
+
+.tico{
+	color:#15f4ee;
+}
+
+.titp{
+	font-family: Sofia;
+	font-size: 20px;
+}
+
+.prpr{
+	font-family: Sofia;
+	color:#15f4ee;
+	font-size: 20px;
+}
+
+/*-----------------------COLOR-----------------------*/
+.colr{
+	height:15px;
+	width:15px;
+	margin-right:5px; 
+	text-decoration: none;
+	border:1px solid white;
+}
+
+#roj{
+	background-color: red;
+}
+
+#azu{
+	background-color: blue;
+}
+
+#mar{
+	background-color: brown;
+}
+
+#neg{
+	background-color: black;
+}
+
+#bla{
+	background-color: white;
+}
+
+#ros{
+	background-color: pink;
+}
+
+#nar{
+	background-color: orange;
+}
+
+#ver{
+	background-color: green;
+}
+
+#ama{
+	background-color: yellow;
+}
+
+#mor{
+	background-color: purple;
+}
+
+.colr:hover{
+	border:2px solid #15f4ee;
+}
+
+/*-----------------------CANTIDAD-----------------------*/
+.mod{
+	height:30px;
+	width:30px;
+	text-decoration: none;
+	background-color: black;
+	color:white;
+	border:1px solid white;
+}
+
+.mod:hover{
+	border:1px solid #15f4ee;
+}
+.mod:active{
+	color:red;
+}
+
+/*-----------------------COMPRA-----------------------*/
+.prbt{
+    white-space:pre; 
+}
+
+
+.bind{
+	background-color: black;
+	color:white;
+	border: 2px solid rgba(18, 138, 125, .9);
+	border-radius: 5px;
+
+}
+
+.bopc{
+	font-size: 16px;
+}
+
+
+.bind:hover{
+border:2px solid #15ffee;
+}
+
+.bind:active{
+color:#15ffee;
+}
+
+
+.cudes{
+	font-family: Arial;
+}
+
+/*--------------------PIE DE PAGINA----------------------*/
+#pie{
+
+background-color: rgba(18, 138, 125, .9);
+	margin-bottom: 0;
+	border-top: 1px solid white;
+
+}
+#pie p{
+
+	margin-left:20px;
+	padding-bottom: 20px;
+	margin-bottom: 0;
+	color:white; 
+}

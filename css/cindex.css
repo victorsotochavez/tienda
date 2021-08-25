@@ -1,0 +1,588 @@
+/*
+artículo p span { ... }
+selecciona cualquier elemento <span> que se encuentre dentro de un <p>, que esté dentro de un <artículo> 
+
+h1 + ul + p { ... }
+selecciona cualquier <p> que se encuentre directamente después de <ul>, que va directamente después de <h1> 
+
+h1, h2, .intro
+esto se refiere a cada de ellos uno individualmente
+
+h1 ~ p 
+esto significa todos los elemento p despues de h1
+no importa que haya mas elementos en medio
+*/
+
+/*
+@rules(da ciertas reglas):
+@media
+@import
+*/
+
+/*
+ESPECIFICIDAD>(arriba>abajo)
+ESCECIFICIDAD:
+id(atributo)(#abc)>clases(.abc)>selectores de tipo(html)(h2)
+*/
+
+/*
+!important(tiene el mayor nivel de todos, anula
+las otras reglas , pero no es recomendable usar
+solo en casos extremos. Pues cambia la forma
+de logica del css)
+border: none !important;
+*/
+
+/*
+EXAMPLES
+a[title] { }
+
+a[href="https://example.com"] { }
+
+a: hover {}
+
+p::first-line { }
+*/
+
+/*
+100% o 100em depende del elemento padre, 
+en cambio 100px es fijo
+*/
+
+/*
+FUNCION:
+calc(10%+20px)
+*/
+
+/*
+vw y vh:
+En CSS hay unidades que asociadas con el tamaño de la 
+ventana gráfica: las unidades vw para el ancho y vh 
+para la altura. Con estas unidades puedes establecer
+ tamaños relativos a la ventana gráfica del usuario.
+1vh es igual al 1% de la altura de visualización, 
+y 1vw es igual al 1% de la anchura.
+*/
+
+/*----------------HEADER--------------------*/
+.cuerpo {
+    margin:0;
+    background-color: white;
+}
+
+/*En este caso tambien se puede utilizar el selector
+p = .rw   */
+
+html {
+  box-sizing: border-box;
+}
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+/*
+header,.enc,.ra,.rb,.rc,.rd,.re{
+	box-sizing: border-box;
+}
+*/
+
+header{
+	display: block;
+  margin:0;
+  position: sticky;
+  top:0;
+  width: 100%;
+  background-color: black;
+  z-index: 2;/*Mientras mayor sea el numero se posicionara
+  mas encima de otro elemento relative o abosulte o sticky
+  o fixed si no lo mencionas el valor predeterminado
+  sera 0*/
+}
+
+.enc {
+	display: block;
+	margin:0;
+	height:65px;
+	width: 100%;
+	background-color:black;
+	border-bottom: white 1px solid;
+	
+}
+
+.boi{
+	background-color: black;
+	color:white;
+	border: 1px solid black;
+	border-radius: 5px;
+}
+
+
+
+.boi:hover{
+background-color:rgb(0,0,0);
+opacity:0.7;
+}
+
+.boi:active{
+	color:#15f4ee;
+}
+
+.rd{
+	margin-left: 15px;/*sirve para el espacio*/
+	/*siempre es este orden, sino no funcionara*/
+	padding-top: 5px;
+	padding-right: 15px;
+	padding-bottom: 5px;
+	padding-left: 15px;
+	text-decoration: none;
+	color:white;
+	    font-family:Sofia;
+	        background-color: black;
+	border: white 1px solid;
+	border-radius: 7px;
+	text-align: center;
+}
+
+.rd:hover{
+	color:black;
+	background-color:white; 
+	border: black 1px solid;
+border-radius: 7px;
+}
+
+.re{
+	margin-left:5px;
+	padding-top: 10px;
+	padding-right: 10px;
+	padding-bottom: 10px;
+	padding-left: 10px;
+	color:white;
+text-decoration: none;
+    font-family:Sofia;
+    background-color: black;
+border: white 1px solid;
+border-radius: 7px;
+}
+
+.re:hover{
+	color:black;
+	background-color:white; 
+	border: black 1px solid;
+border-radius: 7px;
+}
+
+.ra{
+	display: inline-block;
+	margin-left: 302px;/*sirve para el espacio*/
+	padding: 5px;
+	text-decoration: none;
+	/*border: white 1px solid;*/
+	color:#15f4ee;
+    font-family:Sofia;
+    font-size:30px;
+}
+
+.rb {
+	margin-left: 145px;
+display: inline-block;
+}
+
+#rba{
+	background-color: black;
+	color:white;
+	border:white 1px solid;
+	
+	border-radius: 7px;
+
+	padding:6px;
+}
+
+.rc{
+	color:white;
+	border-style: none;
+	background-color: black;
+}
+
+.rc:hover{
+	color:#15f4ee;
+}
+
+#rf{
+	border:1px solid black;
+		margin-left:10px;
+}
+
+/*
+  top: 120px;
+  left: 500px;
+  font-size: 30px;
+  color:white;
+  */
+
+/*----------------NAVEGADOR--------------------*/
+ .navg{
+ 	display:block;
+ 	width:100%;
+ }
+
+.navli  {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;/*desbordamiento=overflow*/
+background-color: rgba(18, 138, 125, .9);
+}
+
+.navg .navc{
+  float: left;
+}
+
+.navg .navc .navlk {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 5px 107px;
+  text-decoration: none;
+  font-family:Sofia;
+  border-bottom: 1px solid black;
+}
+
+.navg .navc .navlk:hover {
+  background-color:white;
+  color:black; 
+}
+
+/*
+#dor:hover{
+	background-color: blue;
+}
+
+#mubl:hover{
+	background-color: brown;
+}
+
+#sla:hover{
+	background-color: orange;
+}
+
+#comed:hover{
+	background-color: purple;
+}
+
+#ofca:hover{
+	background-color: pink;
+}
+
+#extr:hover{
+	background-color: green;
+}
+*/
+
+/*----------------SUBNAVEGADOR--------------------*/
+.navsub{
+display:none;
+  position: absolute;
+	width:100%;
+background-color: rgba(18, 138, 125, .9);
+  z-index: 1;
+}
+
+#nsdor{
+	padding-left: 380px;
+}
+
+#nssa{
+	padding-left: 398px;
+}
+
+#nsco{
+	padding-left: 490px;
+}
+
+#nsof{
+	padding-left: 451px;
+}
+
+.navsub .nsli{
+	list-style-type: none;
+  float:left;
+}
+
+
+.navsub .nsc .nslk{
+	display: block;
+  color: black;
+  text-decoration: none;
+}
+
+.navsub .nsc .nslk:hover{
+	color:darkred;
+}
+
+.navsub .nsp{
+	color:#8B4513;
+}
+
+
+
+
+/*----------------MAIN--------------------*/
+/*----------------PORTADA--------------------*/
+/*
+main{
+
+}
+*/
+.port{
+	  position: static;
+
+}
+
+.porta {
+  position: absolute;
+  top: 190px;
+  left: 270px;
+  font-size: 30px;
+  z-index: 1;
+}
+
+
+
+/*----------------(CONTENIDO)PRODUCTOS--------------------*/
+#conele{
+	width:100%;
+	height:1280px;
+	background-color:black;
+;
+
+}
+.prod{
+	width:100%;
+	height:520px;
+	background-color: black;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+}
+
+.titpr{
+	white-space:pre; 
+	font-family:Sofia;
+	color:white;
+}
+
+.polaroid {
+	display:inline-block;
+	margin-left:15px;
+	  width: 700px;
+  background-color: black;
+  color:white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border:1px solid white;
+  border-radius: 10px;
+}
+
+.polaroid:hover{
+  border:1px solid #15f4ee;
+}
+
+.desc{
+	margin:0;
+	padding:0;
+	height: 10px;
+    background-color:rgba(18, 138, 125, .9);
+    border-radius:7px;
+}
+
+/*
+.desc p{
+	display:inline;
+	margin:0;
+	padding:10px;
+	position:relative;
+	top:34px;
+	left:620px;
+  text-align: center;
+  background-color: black;
+  color:#15f4ee;
+  font-family:Sofia;
+
+}
+
+.container {
+  text-align: center;
+    font-family:Sofia;
+    font-size: 18px;
+}
+
+.prvn{
+		white-space:pre; 
+	font-family: Sofia;
+	color:#15f4ee;
+	font-size: 16px;
+
+}
+
+.tac{
+	text-decoration:line-through; 
+}
+
+
+
+.btnp{
+    white-space:pre; 
+}
+
+
+.boi{
+	background-color: black;
+	color:white;
+	border: 1px solid red;
+	border-radius: 5px;
+}
+
+.boipa{
+	font-size: 16px;
+}
+
+.boi:hover{
+background-color:rgb(0,0,0);
+opacity:0.7;
+border:1px solid red;
+}
+
+.boi:active{
+border: 1px solid white;
+}
+
+*/
+
+.desc p{
+	display:inline;
+	margin:0;
+	padding:10px;
+	position:relative;
+	top:34px;
+	left:620px;
+  text-align: center;
+  background-color: black;
+  color:#15f4ee;
+  font-family:Sofia;
+}
+
+.prvn{
+	text-align: center;
+	font-family: Sofia;
+	color:#15f4ee;
+	font-size: 16px;
+
+}
+
+.nopr{
+		color:white;
+		font-size: 18px;
+}
+
+.esp{
+	    white-space:pre; 
+}
+
+.tac{
+	text-decoration:line-through; 
+}
+
+.prbt{
+    white-space:pre; 
+}
+
+
+.bind{
+	background-color: black;
+	color:white;
+	border: 2px solid rgba(18, 138, 125, .9);
+	border-radius: 5px;
+
+}
+
+.bopc{
+	font-size: 16px;
+}
+
+
+.bind:hover{
+border:2px solid #15ffee;
+}
+
+.bind:active{
+color:#15ffee;
+}
+
+
+/*--------------------PIE DE PAGINA----------------------*/
+#pie{
+
+background-color: rgba(18, 138, 125, .9);
+	margin-bottom: 0;
+		border-top: 1px solid white;
+
+
+}
+#pie p{
+
+	margin-left:20px;
+	padding-bottom: 20px;
+	margin-bottom: 0;
+	color:white; 
+}
+
+
+
+
+
+
+
+
+
+/*
+#lk{
+ color:blue;
+}
+.pew{
+color:red;
+}
+*/
+
+/*
+#xa{ 
+	color:red;
+}
+*/
+
+/*
+.rc{
+	padding-left: 300px;
+display: inline-block;
+text-decoration: none;
+color:white;
+}
+*/
+
+/*
+.enc #x1{
+	margin:0;
+}
+*/
+
+
+
+
+
+/*
+.but{
+	color:white;
+	border-style: none;
+	background-color: black;
+	  display: inline-block;
+
+}
+*/
